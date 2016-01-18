@@ -61,12 +61,12 @@ public class Conto implements Serializable
         this.operationID = operationID;
     }
 
-    public Conto(String operationID, String userID, double operationValue, long currentDate)
+    public Conto(String operationID, String userID, double operationValue, long operationDate)
     {
         this.operationID = operationID;
         this.userID = userID;
         this.operationValue = operationValue;
-        this.operationDate = String.valueOf(currentDate);
+        this.operationDate = String.valueOf(operationDate);
     }
 
     public String getOperationID()

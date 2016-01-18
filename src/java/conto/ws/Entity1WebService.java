@@ -76,30 +76,5 @@ public class Entity1WebService
     {
         Conto c = new Conto(operationID, userID, operationValue, System.currentTimeMillis());
         create(c);
-    }
-
-    /**
-     * Web service operation
-     * 
-     * @return 
-     */
-    @WebMethod(operationName = "getAllOperations")
-    public List<OperationRecord> getAllOperations()
-    {
-        List<OperationRecord> operationsList = new LinkedList<>();
-        
-        List<Conto> contoList = contoFacade.findAll();
-        
-        for(Conto c: contoList)
-        {
-            operationsList.add(c.getOperationRecord());
-        }
-                
-        return operationsList;
-    }
-    
-    
-    
-    
-    
+    }    
 }
