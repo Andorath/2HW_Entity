@@ -24,5 +24,7 @@ public interface ContoFacadeLocal
     List<Conto> findRange(int[] range);
 
     int count();
+
+    List<Conto> findAllOrdered();
     
 }

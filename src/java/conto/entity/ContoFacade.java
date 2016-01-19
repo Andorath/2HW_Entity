@@ -1,8 +1,11 @@
 package conto.entity;
 
+
+import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 
 /**
  *
@@ -25,5 +28,14 @@ public class ContoFacade extends AbstractFacade<Conto> implements ContoFacadeLoc
     {
         super(Conto.class);
     }
+
+    @Override
+    public List<Conto> findAllOrdered()
+    {
+        Query q = em.createNamedQuery("Conto.getOperationsByDate");
+        return q.getResultList();
+    }
+    
+    
     
 }

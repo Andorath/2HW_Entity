@@ -27,7 +27,8 @@ import javax.xml.bind.annotation.XmlRootElement;
     //@NamedQuery(name = "Conto.findAll", query = "SELECT c FROM Conto c"),
     @NamedQuery(name = "Conto.findByOperationID", query = "SELECT c FROM Conto c WHERE c.operationID = :operationID"),
     @NamedQuery(name = "Conto.findByUserID", query = "SELECT c FROM Conto c WHERE c.userID = :userID"),
-    @NamedQuery(name = "Conto.findByOperationValue", query = "SELECT c FROM Conto c WHERE c.operationValue = :operationValue")
+    @NamedQuery(name = "Conto.findByOperationValue", query = "SELECT c FROM Conto c WHERE c.operationValue = :operationValue"),
+    @NamedQuery(name = "Conto.getOperationsByDate", query = "SELECT c FROM Conto c ORDER BY c.operationDate")
 })
 public class Conto implements Serializable
 {

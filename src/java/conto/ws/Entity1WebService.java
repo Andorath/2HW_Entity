@@ -53,7 +53,8 @@ public class Entity1WebService
     @WebMethod(operationName = "findAll")
     public List<Conto> findAll()
     {
-        return contoFacade.findAll();
+        //return contoFacade.findAll();
+        return contoFacade.findAllOrdered();
     }
 
     @WebMethod(operationName = "findRange")
